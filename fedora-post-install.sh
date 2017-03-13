@@ -55,7 +55,7 @@ sudo dnf install ffmpeg
 
 # Media apps
 sudo dnf remove rhythmbox
-rm -rf .local/share/rhythmbox/
+rm -rf ~/.local/share/rhythmbox/
 sudo dnf install vlc 
 sudo dnf install clementine 
 sudo dnf install audacity-freeworld
@@ -98,6 +98,7 @@ sudo flatpak install gnome-apps org.gnome.Documents stable
 sudo dnf remove eog
 sudo flatpak install gnome-apps org.gnome.eog stable
 flatpak --user override org.gnome.eog --filesystem=~/.local/share/Trash
+flatpak --user override org.gnome.eog --filesystem=/tmp
 # Keep totem as RPM: needed for thumbnails
 # Keep gnome-clocks as RPM: gnome shell crash on logging if missing
 
@@ -105,7 +106,7 @@ flatpak --user override org.gnome.eog --filesystem=~/.local/share/Trash
 wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
 sudo flatpak install --bundle LibreOffice.flatpak
 rm LibreOffice.flatpak
-cp -r .config/libreoffice/* .var/app/org.libreoffice.LibreOffice/config/libreoffice/
+cp -r ~/.config/libreoffice/* ~/.var/app/org.libreoffice.LibreOffice/config/libreoffice/
 sudo dnf remove libreoffice-core
 
 
