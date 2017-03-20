@@ -131,6 +131,9 @@ sudo mysql_secure_installation
 sudo sed -i 's/memory_limit = .*/memory_limit = 512M/' /etc/php.ini
 sudo sed -i 's/post_max_size = .*/post_max_size = 128M/' /etc/php.ini
 sudo sed -i 's/upload_max_filesize = .*/upload_max_filesize = 128M/' /etc/php.ini
+sudo sed -i 's/error_reporting = .*/error_reporting = E_ALL/' /etc/php.ini
+sudo sed -i 's/display_errors = .*/display_errors = On/' /etc/php.ini
+sudo sed -i 's/display_startup_errors = .*/display_startup_errors = On/' /etc/php.ini
 
 # Development stuff - Web (composer)
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
