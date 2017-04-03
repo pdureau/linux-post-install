@@ -97,8 +97,6 @@ sudo dnf remove gnome-documents
 sudo flatpak install gnome-apps org.gnome.Documents stable
 sudo dnf remove eog
 sudo flatpak install gnome-apps org.gnome.eog stable
-flatpak --user override org.gnome.eog --filesystem=~/.local/share/Trash
-flatpak --user override org.gnome.eog --filesystem=/tmp
 # Keep totem as RPM: needed for thumbnails
 # Keep gnome-clocks as RPM: gnome shell crash on logging if missing
 
