@@ -106,9 +106,7 @@ flatpak --user override org.gnome.eog --filesystem=/tmp
 wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
 sudo flatpak install --bundle LibreOffice.flatpak
 rm LibreOffice.flatpak
-cp -r ~/.config/libreoffice/* ~/.var/app/org.libreoffice.LibreOffice/config/libreoffice/
 sudo dnf remove libreoffice-core
-
 
 # *************
 # * AS DEV
