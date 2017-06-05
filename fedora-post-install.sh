@@ -57,6 +57,8 @@ sudo dnf install ffmpeg
 sudo dnf remove rhythmbox
 rm -rf ~/.local/share/rhythmbox/
 sudo dnf install vlc 
+flatpak --user remote-add tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo
+flatpak --user install tingping io.github.GnomeMpv
 sudo dnf install clementine 
 sudo dnf install audacity-freeworld
 wget https://github.com/gnumdk/lollypop-data/raw/master/org.gnome.Lollypop.flatpak
@@ -105,6 +107,9 @@ wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffi
 sudo flatpak install --bundle LibreOffice.flatpak
 rm LibreOffice.flatpak
 sudo dnf remove libreoffice-core
+
+# Joystick support
+sudo dnf install linuxconsoletools
 
 # *************
 # * AS DEV
