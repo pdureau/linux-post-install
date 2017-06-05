@@ -33,6 +33,9 @@ sudo dnf install gnome-terminal-nautilus
 sudo dnf install unrar
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
 
+# Flatpak remotes : Flathub
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 # Flatpak remotes: Gnome
 wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 sudo flatpak remote-add --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
