@@ -2,8 +2,9 @@ sudo dnf update
 su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 sudo dnf update
 
+
 # *************
-# * HARDWARE
+# * HARDWARE SUPPORT
 # *************
 
 # Hardware issues with Yoga Pro 3
@@ -24,7 +25,7 @@ fi
 
 
 # *************
-# * AS USER
+# * SYSTEM TOOLS
 # *************
 
 # Some stuff
@@ -32,6 +33,29 @@ sudo dnf install gnome-tweak-tool
 sudo dnf install gnome-terminal-nautilus
 sudo dnf install unrar
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
+
+# Media libs
+sudo dnf install gstreamer1-libav gstreamer1-vaapi gstreamer1-plugins-{good,good-extras,ugly}
+sudo dnf install gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld
+sudo dnf install ffmpeg
+
+# Sync
+sudo dnf copr enable decathorpe/syncthing
+sudo dnf install syncthing syncthing-gtk syncthing-inotify
+systemctl --user enable syncthing.service
+systemctl --user enable syncthing-inotify.service
+systemctl --user start syncthing.service
+systemctl --user start syncthing-inotify.service
+sudo dnf install nautilus-python
+sudo dnf install transmission-gtk
+
+# Joystick support
+sudo dnf install linuxconsoletools
+
+
+# *************
+# * APPS SOURCES
+# *************
 
 # Flatpak remotes : Flathub
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -47,47 +71,34 @@ wget http://distribute.kde.org/kdeflatpak.gpg
 sudo flatpak remote-add kde http://distribute.kde.org/flatpak-testing/ --gpg-import=kdeflatpak.gpg
 rm kdeflatpak.gpg
 
+
+# *************
+# * APPS
+# *************
+
 # Graphic apps
 sudo dnf install gimp 
 sudo dnf install inkscape
-
-# Media libs
-sudo dnf install gstreamer1-libav gstreamer1-vaapi gstreamer1-plugins-{good,good-extras,ugly}
-sudo dnf install gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld
-sudo dnf install ffmpeg
 
 # Media apps
 sudo dnf remove rhythmbox
 rm -rf ~/.local/share/rhythmbox/
 sudo dnf install vlc 
-flatpak --user remote-add tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo
-flatpak --user install tingping io.github.GnomeMpv
+sudo flatpak install flathub io.github.GnomeMpv
 sudo dnf install clementine 
 sudo dnf install audacity-freeworld
-wget https://github.com/gnumdk/lollypop-data/raw/master/org.gnome.Lollypop.flatpak
-sudo flatpak install --bundle org.gnome.Lollypop.flatpak
-rm org.gnome.Lollypop.flatpak
+sudo flatpak install flathub org.gnome.Lollypop
 
 # Messaging apps
 sudo dnf remove evolution
 sudo dnf install thunderbird tracker-thunderbird-plugin
 sudo flatpak install gnome-apps org.gnome.Geary stable
 sudo dnf install liferea
-sudo flatpak install --from https://github.com/jangernert/FeedReader/releases/download/v2.0/feedreader.flatpakref
+sudo flatpak install flathub org.gnome.FeedReader
 
 # Games
 sudo dnf install steam
 sudo dnf install mame
-
-# Sync apps
-sudo dnf copr enable decathorpe/syncthing
-sudo dnf install syncthing syncthing-gtk syncthing-inotify
-systemctl --user enable syncthing.service
-systemctl --user enable syncthing-inotify.service
-systemctl --user start syncthing.service
-systemctl --user start syncthing-inotify.service
-sudo dnf install nautilus-python
-sudo dnf install transmission-gtk
 
 # From RPM to Flatpak: Gnome Official
 sudo dnf remove gnome-calendar
@@ -110,6 +121,3 @@ wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffi
 sudo flatpak install --bundle LibreOffice.flatpak
 rm LibreOffice.flatpak
 sudo dnf remove libreoffice-core
-
-# Joystick support
-sudo dnf install linuxconsoletools
