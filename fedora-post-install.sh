@@ -97,7 +97,7 @@ sudo dnf install liferea
 sudo flatpak install flathub org.gnome.FeedReader
 
 # Games
-sudo dnf install steam
+sudo flatpak install flathub com.valvesoftware.Steam
 sudo dnf install mame
 
 # From RPM to Flatpak: Gnome Official
