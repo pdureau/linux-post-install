@@ -10,7 +10,7 @@ sudo flatpak install gnome org.gnome.Sdk 3.22
 sudo flatpak install kde org.kde.Sdk
 
 # Development stuff - Web
-sudo dnf install phpMyAdmin httpd mariadb-server memcached php-pecl-memcache
+sudo dnf install phpMyAdmin httpd mariadb-server memcached php-pecl-memcache php-intl
 sudo systemctl start mariadb
 sudo mysql_secure_installation
 sudo sed -i 's/memory_limit = .*/memory_limit = 512M/' /etc/php.ini
