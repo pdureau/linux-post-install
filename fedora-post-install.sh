@@ -78,7 +78,8 @@ rm kdeflatpak.gpg
 
 # Graphic apps
 sudo dnf install gimp 
-sudo dnf install inkscape
+sudo flatpak install flathub org.inkscape.Inkscape
+# org.darktable.Darktable ??
 
 # Media apps
 sudo dnf remove rhythmbox
