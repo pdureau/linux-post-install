@@ -89,6 +89,7 @@ sudo flatpak install flathub io.github.GnomeMpv
 sudo dnf install clementine 
 sudo dnf install audacity-freeworld
 sudo flatpak install flathub org.gnome.Lollypop
+sudo dnf install mscore
 
 # Messaging apps
 sudo dnf remove evolution
