@@ -58,15 +58,12 @@ sudo dnf install linuxconsoletools
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Flatpak remotes: Gnome
-wget https://sdk.gnome.org/keys/gnome-sdk.gpg
-sudo flatpak remote-add --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
-sudo flatpak remote-add --gpg-import=gnome-sdk.gpg gnome-apps https://sdk.gnome.org/repo-apps/
-rm gnome-sdk.gpg
+sudo flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+sudo flatpak remote-add --if-not-exists gnome-apps https://sdk.gnome.org/gnome-apps.flatpakrepo
 
 # Flatpak remotes: KDE
-wget http://distribute.kde.org/kdeflatpak.gpg
-sudo flatpak remote-add kde http://distribute.kde.org/flatpak-testing/ --gpg-import=kdeflatpak.gpg
-rm kdeflatpak.gpg
+sudo flatpak remote-add --if-not-exists kderuntime --from https://distribute.kde.org/kderuntime.flatpakrepo
+sudo flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
 
 
 # *************
