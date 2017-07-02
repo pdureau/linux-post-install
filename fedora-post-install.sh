@@ -101,25 +101,3 @@ sudo flatpak install flathub org.gnome.FeedReader
 # Games
 sudo flatpak install flathub com.valvesoftware.Steam
 sudo dnf install mame
-
-# From RPM to Flatpak: Gnome Official
-sudo dnf remove gnome-calendar
-sudo flatpak install gnome-apps org.gnome.Calendar stable
-sudo dnf remove gnome-weather
-sudo flatpak install gnome-apps org.gnome.Weather stable
-sudo dnf remove gnome-maps
-sudo flatpak install gnome-apps org.gnome.Maps
-sudo dnf remove gnome-calculator
-sudo flatpak install gnome-apps org.gnome.Calculator stable
-sudo dnf remove gnome-documents
-sudo flatpak install gnome-apps org.gnome.Documents stable
-sudo dnf remove eog
-sudo flatpak install gnome-apps org.gnome.eog stable
-# Keep totem as RPM: needed for thumbnails
-# Keep gnome-clocks as RPM: gnome shell crash on logging if missing
-
-# From RPM to Flatpak: LibreOffice Official
-wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
-sudo flatpak install --bundle LibreOffice.flatpak
-rm LibreOffice.flatpak
-sudo dnf remove libreoffice-core
