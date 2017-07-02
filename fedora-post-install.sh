@@ -18,9 +18,6 @@ then
   sudo akmods --force
   # Power management
   sudo dnf install tlp
-  # Orientation changes when rotating the panel, ambient light to change the screen brightness, and Geoclue.
-  # Works very fine but 70% of user space booting time (40% of total booting time)
-  # sudo systemctl disable iio-sensor-proxy.service
 fi
 
 
