@@ -73,7 +73,7 @@ sudo flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.or
 # Graphic apps
 sudo dnf install gimp 
 sudo flatpak install flathub org.inkscape.Inkscape
-# org.darktable.Darktable ??
+sudo flatpak install flathub org.darktable.Darktable
 
 # Media apps
 sudo dnf remove rhythmbox
@@ -95,3 +95,4 @@ sudo flatpak install flathub org.gnome.FeedReader
 # Games
 sudo flatpak install flathub com.valvesoftware.Steam
 sudo dnf install mame
+sudo flatpak install flathub org.libretro.RetroArch
