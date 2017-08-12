@@ -44,7 +44,6 @@ systemctl --user enable syncthing-inotify.service
 systemctl --user start syncthing.service
 systemctl --user start syncthing-inotify.service
 sudo dnf install nautilus-python
-sudo dnf install transmission-gtk
 
 # Joystick support
 sudo dnf install linuxconsoletools
@@ -69,6 +68,9 @@ sudo flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.or
 # *************
 # * APPS
 # *************
+
+# Sync apps
+sudo flatpak install flathub com.transmissionbt.Transmission
 
 # Graphic apps
 sudo dnf install gimp 
