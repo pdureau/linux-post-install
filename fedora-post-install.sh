@@ -80,12 +80,13 @@ sudo flatpak install flathub org.darktable.Darktable
 # Media apps
 sudo dnf remove rhythmbox
 rm -rf ~/.local/share/rhythmbox/
-sudo dnf install vlc 
+sudo flatpak install flathub org.videolan.VLC
 sudo flatpak install flathub io.github.GnomeMpv
 sudo dnf install clementine 
 sudo dnf install audacity-freeworld
 sudo flatpak install flathub org.gnome.Lollypop
 sudo dnf install mscore
+sudo flatpak install flathub com.github.JannikHv.Gydl
 
 # Messaging apps
 sudo dnf remove evolution
