@@ -83,7 +83,7 @@ rm -rf ~/.local/share/rhythmbox/
 sudo flatpak install flathub org.videolan.VLC
 sudo flatpak install flathub io.github.GnomeMpv
 sudo dnf install clementine 
-sudo dnf install audacity-freeworld
+sudo flatpak install flathub org.audacityteam.Audacity
 sudo flatpak install flathub org.gnome.Lollypop
 sudo dnf install mscore
 sudo flatpak install flathub com.github.JannikHv.Gydl
