@@ -53,16 +53,11 @@ sudo dnf install linuxconsoletools
 # * APPS SOURCES
 # *************
 
-# Flatpak remotes : Flathub
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# Flatpak remotes: Gnome
-sudo flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
-sudo flatpak remote-add --if-not-exists gnome-apps https://sdk.gnome.org/gnome-apps.flatpakrepo
-
-# Flatpak remotes: KDE
-sudo flatpak remote-add --if-not-exists kderuntime --from https://distribute.kde.org/kderuntime.flatpakrepo
-sudo flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
+# sudo flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+# sudo flatpak remote-add --if-not-exists gnome-apps https://sdk.gnome.org/gnome-apps.flatpakrepo
+# sudo flatpak remote-add --if-not-exists kderuntime --from https://distribute.kde.org/kderuntime.flatpakrepo
+# sudo flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
 
 
 # *************
@@ -82,16 +77,18 @@ sudo dnf remove rhythmbox
 rm -rf ~/.local/share/rhythmbox/
 sudo flatpak install flathub org.videolan.VLC
 sudo flatpak install flathub io.github.GnomeMpv
-sudo dnf install clementine 
-sudo flatpak install flathub org.audacityteam.Audacity
+sudo dnf install clementine
 sudo flatpak install flathub org.gnome.Lollypop
+
+# Media creation apps
+sudo flatpak install flathub org.audacityteam.Audacity
 sudo dnf install mscore
 sudo flatpak install flathub com.github.JannikHv.Gydl
 
 # Messaging apps
 sudo dnf remove evolution
 sudo dnf install thunderbird tracker-thunderbird-plugin
-sudo flatpak install gnome-apps org.gnome.Geary stable
+sudo flatpak install flathub org.gnome.Geary stable
 sudo dnf install liferea
 sudo flatpak install flathub org.gnome.FeedReader
 
