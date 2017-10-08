@@ -14,8 +14,6 @@ then
   sudo systemctl enable fstrim.timer
   # Wi-Fi (from RPM Fusion)
   sudo dnf install kmod-wl --allowerasing
-  sudo dnf install kernel-devel
-  sudo akmods --force
   # Power management
   sudo dnf install tlp
 fi
@@ -27,23 +25,13 @@ fi
 
 # Some stuff
 sudo dnf install gnome-tweak-tool
-sudo dnf install gnome-terminal-nautilus
 sudo dnf install unrar
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
 
-# Media libs
+# Media libs. Useful at least for thumbnails in Nautilus.
 sudo dnf install gstreamer1-libav gstreamer1-vaapi gstreamer1-plugins-{good,good-extras,ugly}
 sudo dnf install gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld
 sudo dnf install ffmpeg
-
-# Sync
-sudo dnf copr enable decathorpe/syncthing
-sudo dnf install syncthing syncthing-gtk syncthing-inotify
-systemctl --user enable syncthing.service
-systemctl --user enable syncthing-inotify.service
-systemctl --user start syncthing.service
-systemctl --user start syncthing-inotify.service
-sudo dnf install nautilus-python
 
 # Joystick support
 sudo dnf install linuxconsoletools
@@ -66,8 +54,10 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 # Sync apps
 sudo flatpak install flathub com.transmissionbt.Transmission
+sudo flatpak install flathub org.filezillaproject.Filezilla
+sudo dnf install syncthing syncthing-gtk syncthing-inotify
 
-# Graphic apps
+# Graphic creation apps
 sudo dnf install gimp 
 sudo flatpak install flathub org.inkscape.Inkscape
 sudo flatpak install flathub org.darktable.Darktable
@@ -87,7 +77,7 @@ sudo flatpak install flathub com.github.JannikHv.Gydl
 
 # Messaging apps
 sudo dnf remove evolution
-sudo dnf install thunderbird tracker-thunderbird-plugin
+sudo dnf install thunderbird
 sudo flatpak install flathub org.gnome.Geary stable
 sudo dnf install liferea
 sudo flatpak install flathub org.gnome.FeedReader
