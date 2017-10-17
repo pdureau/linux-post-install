@@ -58,7 +58,7 @@ sudo flatpak install flathub org.filezillaproject.Filezilla
 sudo dnf install syncthing syncthing-gtk syncthing-inotify
 
 # Graphic creation apps
-sudo dnf install gimp 
+sudo flatpak install flathub org.gimp.GIMP
 sudo flatpak install flathub org.inkscape.Inkscape
 sudo flatpak install flathub org.darktable.Darktable
 
@@ -69,6 +69,7 @@ sudo flatpak install flathub org.videolan.VLC
 sudo flatpak install flathub io.github.GnomeMpv
 sudo dnf install clementine
 sudo flatpak install flathub org.gnome.Lollypop
+sudo dnf install lollypop-portal
 
 # Media creation apps
 sudo flatpak install flathub org.audacityteam.Audacity
@@ -78,7 +79,7 @@ sudo flatpak install flathub com.github.JannikHv.Gydl
 # Messaging apps
 sudo dnf remove evolution
 sudo dnf install thunderbird
-sudo flatpak install flathub org.gnome.Geary stable
+sudo flatpak install flathub org.gnome.Geary
 sudo dnf install liferea
 sudo flatpak install flathub org.gnome.FeedReader
 
