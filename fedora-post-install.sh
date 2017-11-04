@@ -73,13 +73,11 @@ sudo dnf install lollypop-portal
 
 # Media creation apps
 sudo flatpak install flathub org.audacityteam.Audacity
-sudo dnf install mscore
+sudo flatpak install flathub org.musescore.MuseScore
 sudo flatpak install flathub com.github.JannikHv.Gydl
 
 # Messaging apps
-sudo dnf remove evolution
 sudo dnf install thunderbird
-sudo flatpak install flathub org.gnome.Geary
 sudo dnf install liferea
 sudo flatpak install flathub org.gnome.FeedReader
 
