@@ -1,6 +1,6 @@
 # Some generic dev stuff
 sudo dnf install vim
-sudo flatpak install gnome-apps org.gnome.gitg stable
+sudo flatpak install flathub org.gnome.gitg
 sudo dnf copr enable heikoada/nautilus-git
 sudo dnf install nautilus-git 
 

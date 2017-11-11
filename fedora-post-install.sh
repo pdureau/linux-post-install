@@ -41,15 +41,8 @@ sudo dnf install ffmpeg
 sudo dnf install joystick
 sudo dnf install nrg2iso
 
-# *************
-# * APPS SOURCES
-# *************
-
+# Apps sources
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-# sudo flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
-# sudo flatpak remote-add --if-not-exists gnome-apps https://sdk.gnome.org/gnome-apps.flatpakrepo
-# sudo flatpak remote-add --if-not-exists kderuntime --from https://distribute.kde.org/kderuntime.flatpakrepo
-# sudo flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
 
 
 # *************
