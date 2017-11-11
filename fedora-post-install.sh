@@ -28,6 +28,10 @@ sudo dnf install gnome-tweak-tool
 sudo dnf install unrar
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
 
+# Replace terminal emulator
+sudo dnf install tilix tilix-nautilus
+sudo dnf remove gnome-terminal
+
 # Media libs. Useful at least for thumbnails in Nautilus.
 sudo dnf install gstreamer1-libav gstreamer1-vaapi gstreamer1-plugins-{good,good-extras,ugly}
 sudo dnf install gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld
@@ -35,7 +39,6 @@ sudo dnf install ffmpeg
 
 # Joystick support
 sudo dnf install linuxconsoletools
-
 
 # *************
 # * APPS SOURCES
@@ -63,11 +66,9 @@ sudo flatpak install flathub org.inkscape.Inkscape
 sudo flatpak install flathub org.darktable.Darktable
 
 # Media apps
-sudo dnf remove rhythmbox
-rm -rf ~/.local/share/rhythmbox/
+sudo dnf install rhythmbox-alternative-toolbar
 sudo flatpak install flathub org.videolan.VLC
 sudo flatpak install flathub io.github.GnomeMpv
-sudo dnf install clementine
 sudo flatpak install flathub org.gnome.Lollypop
 sudo dnf install lollypop-portal
 
