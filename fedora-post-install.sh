@@ -37,8 +37,9 @@ sudo dnf install gstreamer1-libav gstreamer1-vaapi gstreamer1-plugins-{good,good
 sudo dnf install gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld
 sudo dnf install ffmpeg
 
-# Joystick support
-sudo dnf install linuxconsoletools
+# Games support
+sudo dnf install joystick
+sudo dnf install nrg2iso
 
 # *************
 # * APPS SOURCES
