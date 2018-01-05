@@ -77,6 +77,7 @@ sudo dnf install lollypop-portal
 sudo flatpak install flathub org.audacityteam.Audacity
 sudo flatpak install flathub org.musescore.MuseScore
 sudo flatpak install flathub com.github.JannikHv.Gydl
+sudo flatpak install flathub com.github.wwmm.pulseeffects
 
 # Messaging apps
 sudo dnf install thunderbird
