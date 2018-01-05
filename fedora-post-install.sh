@@ -27,6 +27,7 @@ fi
 sudo dnf install gnome-tweak-tool
 sudo dnf install unrar
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
+sudo dnf install freetype-freeworld
 
 # Replace terminal emulator
 sudo dnf install tilix tilix-nautilus
@@ -40,6 +41,12 @@ sudo dnf install ffmpeg
 # Games support
 sudo dnf install joystick
 sudo dnf install nrg2iso
+
+# Gnome Shell integration with Firefox
+sudo dnf install chrome-gnome-shell
+
+# GSConnect support
+sudo dnf install fuse-sshfs
 
 # Apps sources
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
