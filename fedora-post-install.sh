@@ -26,6 +26,7 @@ fi
 # Some stuff
 sudo dnf install gnome-tweak-tool
 sudo dnf install unrar
+sudo dnf install ImageMagick
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
 sudo dnf install freetype-freeworld
 
@@ -78,6 +79,7 @@ sudo flatpak install flathub org.audacityteam.Audacity
 sudo flatpak install flathub org.musescore.MuseScore
 sudo flatpak install flathub com.github.JannikHv.Gydl
 sudo flatpak install flathub com.github.wwmm.pulseeffects
+sudo dnf install mkvtoolnix-gui
 
 # Messaging apps
 sudo flatpak install flathub org.mozilla.Thunderbird
