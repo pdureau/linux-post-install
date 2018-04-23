@@ -10,12 +10,7 @@ sudo flatpak install gnome org.gnome.Sdk
 sudo flatpak install kde org.kde.Sdk
 
 # Development stuff - Web
-sudo dnf install composer phpMyAdmin httpd mariadb-server memcached php-pecl-memcache php-intl
-sudo systemctl start mariadb
-sudo mysql_secure_installation
-sudo sed -i 's/memory_limit = .*/memory_limit = 512M/' /etc/php.ini
-sudo sed -i 's/post_max_size = .*/post_max_size = 128M/' /etc/php.ini
-sudo sed -i 's/upload_max_filesize = .*/upload_max_filesize = 128M/' /etc/php.ini
-sudo sed -i 's/error_reporting = .*/error_reporting = E_ALL/' /etc/php.ini
-sudo sed -i 's/display_errors = .*/display_errors = On/' /etc/php.ini
-sudo sed -i 's/display_startup_errors = .*/display_startup_errors = On/' /etc/php.ini
+sudo dnf install docker docker-compose
+sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
+sudo firewall-cmd --permanent --zone=trusted --add-port=4243/tcp
+sudo dnf install cockpit
