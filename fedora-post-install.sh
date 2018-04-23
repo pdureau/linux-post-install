@@ -80,11 +80,11 @@ sudo flatpak install flathub com.github.JannikHv.Gydl
 sudo flatpak install flathub com.github.wwmm.pulseeffects
 
 # Messaging apps
-sudo dnf install thunderbird
+sudo flatpak install flathub org.mozilla.Thunderbird
 sudo dnf install liferea
 sudo flatpak install flathub org.gnome.FeedReader
 
 # Games
 sudo flatpak install flathub com.valvesoftware.Steam
-sudo dnf install mame
 sudo flatpak install flathub org.libretro.RetroArch
+
