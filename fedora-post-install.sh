@@ -30,6 +30,9 @@ sudo dnf install ImageMagick
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
 sudo dnf install freetype-freeworld
 
+# Get material design theme
+sudo dnf install adapta-gtk-theme
+
 # Replace terminal emulator
 sudo dnf install tilix tilix-nautilus
 sudo dnf remove gnome-terminal
@@ -51,7 +54,6 @@ sudo dnf install fuse-sshfs
 
 # Apps sources
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 
 # *************
 # * APPS
