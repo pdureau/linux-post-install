@@ -82,7 +82,7 @@ sudo flatpak install flathub org.audacityteam.Audacity
 sudo flatpak install flathub org.musescore.MuseScore
 sudo flatpak install flathub com.github.JannikHv.Gydl
 sudo flatpak install flathub com.github.wwmm.pulseeffects
-sudo dnf install mkvtoolnix-gui
+sudo flatpak install flathub org.bunkus.mkvtoolnix-gui 
 
 # Messaging apps
 sudo flatpak install flathub org.mozilla.Thunderbird
