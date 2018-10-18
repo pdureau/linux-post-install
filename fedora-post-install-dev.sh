@@ -4,6 +4,7 @@ sudo flatpak install flathub org.gnome.gitg
 sudo dnf copr enable heikoada/nautilus-git
 sudo dnf install nautilus-git 
 sudo flatpak install flathub com.github.fabiocolacio.marker
+sudo dnf install cloc
 
 # Development - Flatpak
 sudo dnf install flatpak-builder
