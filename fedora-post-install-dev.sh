@@ -5,6 +5,10 @@ sudo dnf copr enable heikoada/nautilus-git
 sudo dnf install nautilus-git 
 sudo flatpak install flathub com.github.fabiocolacio.marker
 sudo dnf install cloc
+sudo dnf install colordiff
+
+# Package managers
+sudo dnf install npm
 
 # Development - Flatpak
 sudo dnf install flatpak-builder
