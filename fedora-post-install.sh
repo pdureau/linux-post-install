@@ -25,6 +25,7 @@ fi
 
 # Some stuff
 sudo dnf install gnome-tweak-tool
+sudo dnf install pavucontrol
 sudo dnf install unrar
 sudo dnf install ImageMagick
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
@@ -63,12 +64,11 @@ sudo flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/wine
 # Sync apps
 sudo flatpak install flathub com.transmissionbt.Transmission
 sudo flatpak install flathub org.filezillaproject.Filezilla
-sudo dnf install syncthing syncthing-gtk syncthing-inotify
+sudo flatpak install flathub me.kozec.syncthingtk 
 
 # Graphic creation apps
 sudo flatpak install flathub org.gimp.GIMP
 sudo flatpak install flathub org.inkscape.Inkscape
-sudo flatpak install flathub org.darktable.Darktable
 
 # Media apps
 sudo dnf install rhythmbox-alternative-toolbar
@@ -82,7 +82,7 @@ sudo flatpak install flathub org.audacityteam.Audacity
 sudo flatpak install flathub org.musescore.MuseScore
 sudo flatpak install flathub com.github.JannikHv.Gydl
 sudo flatpak install flathub com.github.wwmm.pulseeffects
-sudo flatpak install flathub org.bunkus.mkvtoolnix-gui 
+sudo flatpak install flathub org.bunkus.mkvtoolnix-gui
 
 # Messaging apps
 sudo flatpak install flathub org.mozilla.Thunderbird
