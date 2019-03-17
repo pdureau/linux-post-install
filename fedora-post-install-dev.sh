@@ -9,6 +9,7 @@ sudo dnf install colordiff
 
 # Package managers
 sudo dnf install npm
+sudo dnf install composer
 
 # Development - Flatpak
 sudo dnf install flatpak-builder
@@ -20,3 +21,4 @@ sudo dnf install docker docker-compose
 sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
 sudo firewall-cmd --permanent --zone=trusted --add-port=4243/tcp
 sudo dnf install cockpit
+sudo dnf install phpcpd phpunit
