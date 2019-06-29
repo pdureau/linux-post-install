@@ -7,3 +7,5 @@ sudo docker system prune
 
 # Clean /usr
 sudo dnf autoremove
+sudo fc-cache
+sudo npm list -g --depth=0. | grep -v npm | awk -F ' ' '{print $2}' | awk -F '@' '{print $1}' | sudo xargs npm remove -g
