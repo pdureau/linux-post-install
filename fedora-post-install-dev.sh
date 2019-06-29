@@ -22,3 +22,6 @@ sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
 sudo firewall-cmd --permanent --zone=trusted --add-port=4243/tcp
 sudo dnf install cockpit
 sudo dnf install phpcpd phpunit
+
+# Python
+sudo pip3 install black
