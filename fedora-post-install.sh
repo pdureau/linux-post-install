@@ -27,6 +27,7 @@ fi
 sudo dnf install gnome-tweak-tool
 sudo dnf install pavucontrol
 sudo dnf install unrar
+sudo dnf install exa
 sudo dnf install ImageMagick
 su -c 'echo "Defaults pwfeedback" >> /etc/sudoers'
 sudo dnf install freetype-freeworld
@@ -50,12 +51,15 @@ sudo dnf install nrg2iso
 # Gnome Shell integration with Firefox
 sudo dnf install chrome-gnome-shell
 
-# GSConnect support
-sudo dnf install fuse-sshfs
+# KDEConnect integration
+sudo dnf install nautilus-python nautilus-extensions
+sudo dnf install libcanberra-gtk3 gsound
+sudo dnf install gnome-shell-extension-gsconnect webextension-gsconnect nautilus-gsconnect
 
 # Apps sources
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo
+
 
 # *************
 # * APPS
@@ -92,4 +96,3 @@ sudo flatpak install flathub org.gnome.FeedReader
 # Games
 sudo flatpak install flathub com.valvesoftware.Steam
 sudo flatpak install flathub org.libretro.RetroArch
-
