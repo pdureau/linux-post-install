@@ -4,6 +4,7 @@ sudo journalctl --vacuum-size=1M
 sudo rm -rf /var/cache/PackageKit/
 sudo dnf clean all --enablerepo=\*
 sudo docker system prune
+sudo rm -rf /var/lib/systemd/coredump/
 
 # Clean /usr
 sudo dnf autoremove
