@@ -1,9 +1,20 @@
 # *************
-# System & sync
+# System
 # *************
 
 # Firmware: Gnome, FLOSS, Wayland
 sudo flatpak install flathub org.gnome.Firmware
+
+# Flatseal: Gnome, FLOSS, Wayland
+sudo flatpak install flathub com.github.tchx84.Flatseal
+
+# Extensions: Gnome, FLOSS, Wayland
+sudo flatpak install flathub org.gnome.Extensions
+
+
+# *************
+# Sync
+# *************
 
 # Transmission: Gnome, FLOSS, Wayland
 sudo flatpak install flathub com.transmissionbt.Transmission
@@ -11,7 +22,7 @@ sudo flatpak install flathub com.transmissionbt.Transmission
 # Filezilla: FreeDesktop, FLOSS, Wayland
 sudo flatpak install flathub org.filezillaproject.Filezilla
 
-# Synthing: Gnome, FLOSS, Wayland
+# Syncthing: Gnome, FLOSS, Wayland
 sudo flatpak install flathub me.kozec.syncthingtk
 
 
@@ -33,12 +44,14 @@ sudo flatpak install flathub io.github.celluloid_player.Celluloid
 # Lollypop: Gnome, FLOSS, Wayland
 sudo flatpak install flathub org.gnome.Lollypop
 
+
 # *************
 # Productivity
 # *************
 
 # LibreOffice: FreeDesktop, FLOSS, Wayland
 # Already in Fedora Workstation.
+
 
 # *************
 # Creativity
@@ -82,6 +95,7 @@ sudo flatpak install flathub org.gnome.FeedReader
 
 # Signal: FreeDesktop FLOSS, X.org
 sudo flatpak install flathub org.signal.Signal
+
 
 # *************
 # Games
