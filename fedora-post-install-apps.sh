@@ -11,6 +11,9 @@ sudo flatpak install flathub com.github.tchx84.Flatseal
 # Extensions: Gnome, FLOSS, Wayland
 sudo flatpak install flathub org.gnome.Extensions
 
+# Mediawriter: KDE, FLOSS, Wayland
+sudo flatpak install flathub org.fedoraproject.MediaWriter
+
 
 # *************
 # Sync
@@ -84,16 +87,15 @@ sudo flatpak install flathub org.bunkus.mkvtoolnix-gui
 # *************
 
 # Thunderbird: FreeDesktop, FLOSS, Wayland
-# Why not flathub org.mozilla.Thunderbird?
-sudo dnf install thunderbird-wayland
+sudo flatpak install flathub org.mozilla.Thunderbird
 
 # Liferea: Gnome, FLOSS, Wayland
 sudo dnf install liferea
 
-# Feed Reader: Gnome FLOSS, Wayland
-sudo flatpak install flathub org.gnome.FeedReader
+# Newsflash: Gnome, FLOSS, Wayland
+sudo flatpak install flathub com.gitlab.newsflash
 
-# Signal: FreeDesktop FLOSS, X.org
+# Signal: FreeDesktop, FLOSS, X.org
 sudo flatpak install flathub org.signal.Signal
 
 
@@ -103,10 +105,21 @@ sudo flatpak install flathub org.signal.Signal
 
 # Steam: FreeDesktop, Proprietary, X.org
 sudo flatpak install flathub com.valvesoftware.Steam
-
-# RetroArch: KDE, FLOSS, Wayland
-sudo flatpak install flathub org.libretro.RetroArch
+# Work around common problems in Proton.
+sudo dnf install winetricks
 
 # JSTest: Gnome, FLOSS, Wayland
 sudo flatpak install flathub io.gitlab.jstest_gtk.jstest_gtk
 
+
+# *************
+# Games: Emulators
+# *************
+
+# Ludo (Nec, NES, SNES, SMS, SMD): FreeDesktop, FLOSS, ???
+# https://github.com/libretro/ludo/wiki
+git clone https://github.com/pdureau/flatpak-manifests.git
+cd flatpak-manifests
+make ludo
+flatpak remote-add --user local "file://`pwd`/repo" --no-gpg-verify
+flatpak install --user local com.libretro.Ludo

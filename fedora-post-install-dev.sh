@@ -1,27 +1,64 @@
-# Tooling
-sudo dnf install vim
-sudo flatpak install flathub org.gnome.gitg
-sudo dnf copr enable heikoada/nautilus-git
-sudo dnf install nautilus-git 
-sudo flatpak install flathub com.github.fabiocolacio.marker
-sudo dnf install cloc
-sudo dnf install colordiff
+# *************
+# * TOOLING
+# *************
 
-# Package managers
+# CLI
+sudo dnf install colordiff
+sudo dnf install make
+sudo dnf install patch
+
+# Graphical apps
+sudo flatpak install flathub org.gnome.gitg
+sudo flatpak install flathub com.github.fabiocolacio.marker
+sudo flatpak install flathub com.github.alecaddd.sequeler
+
+
+# *************
+# * Package managers
+# *************
+
 sudo dnf install npm
 sudo dnf install composer
 
-# Development - Flatpak
+
+# *************
+# * Flatpak
+# *************
+
 sudo dnf install flatpak-builder
-sudo flatpak install gnome org.gnome.Sdk
-sudo flatpak install kde org.kde.Sdk
+sudo flatpak install flathub org.freedesktop.Sdk
+sudo flatpak install flathub gnome org.gnome.Sdk
+sudo flatpak install flathub kde org.kde.Sdk
 
-# Development - Web
-sudo dnf install docker docker-compose
+
+# *************
+# * Web
+# *************
+
+# Install Docker
+# Fedora 31 switched to cgroup v2, Docker doesn't support cgroup v2 though.
+# Podman & Kubernetes may be considered instead.
+sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
 sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
-sudo firewall-cmd --permanent --zone=trusted --add-port=4243/tcp
-sudo dnf install cockpit
-sudo dnf install phpcpd phpunit
+sudo firewall-cmd --permanent --zone=FedoraWorkstation --add-masquerade
+sudo dnf install moby-engine
+sudo systemctl enable --now docker
+sudo usermod -aG docker $(whoami)
 
-# Python
-sudo pip3 install black
+# Install Docker-related tools.
+sudo dnf install docker-compose
+sudo dnf install cockpit
+
+
+# *************
+# * Other
+# *************
+
+# Beautifiers.
+sudo dnf install black
+sudo npm install --global prettier
+
+# Audio & Midi
+sudo dnf install python3-devel
+sudo dnf install alsa-lib-devel
+sudo pip3 install rtmidi
