@@ -37,7 +37,7 @@ sudo flatpak install flathub kde org.kde.Sdk
 
 # Install Docker
 # Fedora 31 switched to cgroup v2, Docker doesn't support cgroup v2 though.
-sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+# sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
 sudo firewall-cmd --permanent --zone=FedoraWorkstation --add-masquerade
 sudo dnf install moby-engine
 sudo systemctl enable --now docker

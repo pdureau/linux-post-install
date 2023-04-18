@@ -4,7 +4,7 @@ sudo dnf install fedora-workstation-repositories
 sudo dnf update
 
 # Add extra stuff
-sudo dnf install gnome-tweak-tool pavucontrol dconf-editor
+# sudo dnf install gnome-tweak-tool pavucontrol dconf-editor
 sudo dnf install unrar ImageMagick vim
 sudo dnf install libreoffice-langpack-fr
 
@@ -26,6 +26,10 @@ sudo dnf remove PackageKit
 sudo dnf install gstreamer1-libav gstreamer1-vaapi gstreamer1-plugins-{good,good-extras,ugly}
 sudo dnf install gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld
 sudo dnf install ffmpeg
+
+# If there is a beep when starting and stopping audio:
+# Create a file: /etc/modprobe.d/alsa-base.conf containing the one line:
+# options snd_hda_intel power_save=0
 
 # Add KDEConnect integration
 sudo dnf install nautilus-python

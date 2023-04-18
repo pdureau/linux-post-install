@@ -1,5 +1,6 @@
 # Clean /var
 sudo flatpak uninstall --unused
+sudo flatpak repair
 sudo journalctl --vacuum-size=1M
 sudo rm -rf /var/cache/PackageKit/
 sudo dnf clean all --enablerepo=\*
